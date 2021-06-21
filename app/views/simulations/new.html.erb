@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/simulation/new.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Page Content-->
+    <div class="container px-4 px-lg-5">
+      <!-- Heading Row-->
+      <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <h1>Now</h1>
+        <%= f.text_field :plan-price, class="col-lg-7", id:"plan-price", placeholder:"" %>
+        <div class="col-lg-5">
+        </div>
+      </div>
+      <!-- Call to Action-->
+      <div class="card text-white bg-secondary my-5 py-4 text-center">
+        <div class="card-body"><p class="text-white m-0">docomo</p></div>
+      </div>
+      <!-- Content Row-->
+      <div class="row gx-4 gx-lg-5">
+        <div class="col-md-4 mb-5">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title">Plan</h2>
+              <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+            </div>
+            <div class="card-footer">
+              <div class="plan-price">
+                <span>料金</span>
+              </div>
+              <%= f.text_field :plan-price, class:"price-input", id:"plan-price", placeholder:"" %>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title">Options</h2>
+              <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+            </div>
+            <div class="card-footer">
+              <div class="plan-price">
+                <span>料金</span>
+              </div>
+              <%= f.text_field :plan-price, class:"price-input", id:"plan-price", placeholder:"" %>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title">Discounts</h2>
+              <%= f.text_field :plan-price, class:"price-input", id:"plan-price", placeholder:"" %>
+            </div>
+            <div class="card-footer">
+              <div class="plan-price">
+                <span>料金</span>
+              </div>
+              <%= f.text_field :plan-price, class:"price-input", id:"plan-price", placeholder:"" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='register-btn'>
+      <%= f.submit "submit" ,class:"register-red-btn" %>
+    </div>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+      <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

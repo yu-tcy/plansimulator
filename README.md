@@ -8,11 +8,11 @@
 
 ### Association
 
-- has_many :posts
+- has_many :simulations
 - has_many :comments
 
 
-## Posts
+## Simulations
 
 | Colum          | Type          | Options           |
 | -------------- | --------------| ----------------- |
@@ -49,7 +49,7 @@
 
 ### Association
 
-- belongs_to :post
+- belongs_to :simulation
 
 ## Plans
 
@@ -67,7 +67,7 @@
 | option_name | string        | null:false        |
 | price       | integer       | null:false        |
 
-- belongs_to :post
+- belongs_to :simulation
 
 ## Discounts
 | Colum       | Type          | Options           |
@@ -75,18 +75,18 @@
 | dis_name    | string        | null:false        |
 | price       | integer       | null:false        |
 
-- belongs_to :post
+- belongs_to :simulation
 
 
 ## Comments
 
-| Column    | Type          | Options           |
-| --------- | ------------- | ----------------- |
-| text      | text          | null:false        |
-| user      | references    | foreign_key: true |
-| post      | references    | foreign_key: true |
+| Column            | Type          | Options           |
+| --------------- | ------------- | ----------------- |
+| text            | text          | null:false        |
+| user            | references    | foreign_key: true |
+| simulation      | references    | foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- belongs_to :post
+- belongs_to :simulation

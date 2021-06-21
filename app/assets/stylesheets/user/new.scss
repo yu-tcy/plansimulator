@@ -29,7 +29,7 @@
 .input-default {
   width: 100%;
   margin-top: 5px;
-  height: 36px;
+  height: 40px;
   padding: 10px 16px 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
@@ -121,6 +121,16 @@
 }
 
 .register-red-btn {
+  width: 100%;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.login-red-btn {
   width: 100%;
   background: #ea352d;
   border: 1px solid #ea352d;
